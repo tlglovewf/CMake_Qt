@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 2.10)
 project(CMake_Qt)
 cmake_policy(VERSION 3.9)
-#FIND_PACKAGE(Qt5 REQUIRED Core Gui Widgets OpenGL Xml)
 FIND_PACKAGE(Qt5 COMPONENTS Core Gui Widgets Qml Quick REQUIRED)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fPIC")
@@ -21,8 +20,7 @@ if(Qt5_FOUND)
         SET(QT_LIBRARIES ${Qt5Widgets_LIBRARIES} 
 			 ${Qt5Core_LIBRARIES}
        			 ${Qt5Gui_LIBRARIES} 
-			 ${Qt5Xml_LIBRARIES} 
-			 ${Qt5OpenGL_LIBRARIES})
+			 ${Qt5Xml_LIBRARIES} )
 	add_executable(${PROJECT_NAME} main.cpp mainwindow.cpp)
 	TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${QT_LIBRARIES})
 else()
