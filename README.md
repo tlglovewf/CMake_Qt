@@ -1,4 +1,4 @@
-a simple demo shows how to use cmakelist tu build a qt program.
+a simple demo shows that how to make qt program with cmakelist
 
 ## build on ubuntu :
 
